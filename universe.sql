@@ -131,8 +131,9 @@ CREATE TABLE public.planet (
     planet_type text,
     mass_in_solarmass numeric,
     orbital_period_years numeric(6,1),
-    moons integer NOT NULL,
-    rings boolean DEFAULT false NOT NULL
+    number_of_moons integer NOT NULL,
+    rings boolean DEFAULT false NOT NULL,
+    moons boolean DEFAULT false NOT NULL
 );
 
 
@@ -313,18 +314,18 @@ INSERT INTO public.moon VALUES (21, 'Charon', 10, 1978, 0.000255, 6.387, 1200);
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.planet VALUES (1, 'Mercury', 4, 'terrestrial', 0.06, 0.2, 0, false);
-INSERT INTO public.planet VALUES (2, 'Venus', 4, 'terrestrial', 0.81, 0.6, 0, false);
-INSERT INTO public.planet VALUES (3, 'Earth', 4, 'terrestrial', 1.00, 1.0, 1, false);
-INSERT INTO public.planet VALUES (4, 'Mars', 4, 'terrestrial', 0.11, 1.9, 2, false);
-INSERT INTO public.planet VALUES (5, 'Jupiter', 4, 'gas giant', 317.83, 11.9, 80, true);
-INSERT INTO public.planet VALUES (6, 'Saturn', 4, 'gas giant', 95.16, 29.5, 83, true);
-INSERT INTO public.planet VALUES (7, 'Uranus', 4, 'ice giant', 14.54, 84.0, 27, true);
-INSERT INTO public.planet VALUES (8, 'Neptune', 4, 'ice giant', 17.15, 164.8, 14, true);
-INSERT INTO public.planet VALUES (9, 'Ceres', 4, 'dwarf', 0.00016, 4.6, 0, false);
-INSERT INTO public.planet VALUES (10, 'Pluto', 4, 'dwarf', 0.0022, 247.9, 5, false);
-INSERT INTO public.planet VALUES (11, 'Haumea', 4, 'dwarf', 0.0007, 283.8, 2, true);
-INSERT INTO public.planet VALUES (12, 'Makemake', 4, 'dwarf', 0.0005, 306.2, 1, false);
+INSERT INTO public.planet VALUES (1, 'Mercury', 4, 'terrestrial', 0.06, 0.2, 0, false, false);
+INSERT INTO public.planet VALUES (2, 'Venus', 4, 'terrestrial', 0.81, 0.6, 0, false, false);
+INSERT INTO public.planet VALUES (9, 'Ceres', 4, 'dwarf', 0.00016, 4.6, 0, false, false);
+INSERT INTO public.planet VALUES (3, 'Earth', 4, 'terrestrial', 1.00, 1.0, 1, false, true);
+INSERT INTO public.planet VALUES (4, 'Mars', 4, 'terrestrial', 0.11, 1.9, 2, false, true);
+INSERT INTO public.planet VALUES (5, 'Jupiter', 4, 'gas giant', 317.83, 11.9, 80, true, true);
+INSERT INTO public.planet VALUES (6, 'Saturn', 4, 'gas giant', 95.16, 29.5, 83, true, true);
+INSERT INTO public.planet VALUES (7, 'Uranus', 4, 'ice giant', 14.54, 84.0, 27, true, true);
+INSERT INTO public.planet VALUES (8, 'Neptune', 4, 'ice giant', 17.15, 164.8, 14, true, true);
+INSERT INTO public.planet VALUES (10, 'Pluto', 4, 'dwarf', 0.0022, 247.9, 5, false, true);
+INSERT INTO public.planet VALUES (11, 'Haumea', 4, 'dwarf', 0.0007, 283.8, 2, true, true);
+INSERT INTO public.planet VALUES (12, 'Makemake', 4, 'dwarf', 0.0005, 306.2, 1, false, true);
 
 
 --
